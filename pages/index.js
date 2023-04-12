@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import StressCheckForm from '../components/Organism/StressCheckForm'
 
 const questions = [
   { id: 1, text: '仕事中、私はしばしば疲れ切ってしまう' },
@@ -26,29 +27,17 @@ export default function Home () {
     }
   }
 
-  const questionsList = ['1：全く当てはまらない', '2：あまり当てはまらない', 'どちらともいえない', '4：当てはまる', '5：非常に当てはまる']
-
   return (
     <div>
       <h2>仕事のストレスチェック</h2>
-      {!isFinished
-        ? (
-          <>
-            <p>Question{questions[currentQuestion].id}</p>
-            <p>{questions[currentQuestion].text}</p>
-            <p>{ totalScore }</p>
-            <p>{ setTotalScore }</p>
-            <div>
-              {questionsList.map((score, index) => (
-                <button key={score} onClick={() => handleSubmit(index + 1)}>
-                  {score}
-                </button>
-              ))}
-            </div>
-          </>
-          ) : (
-            <h2>合計点数: {totalScore}</h2>
-          )}
+        {!isFinished ? (
+          <StressCheckForm
+            currentQuestion={questions[currentQuestion]}
+            onSubmit={handleSubmit}
+          />
+        ) : (
+          <h2>合計点数: {totalScore}</h2>
+        )}
     </div>
   )
 }
