@@ -1,5 +1,4 @@
-import React from 'react'
-import { useState } from 'react';
+import React, { useState } from 'react'
 import StressCheckForm from '../components/Organism/StressCheckForm'
 
 const questions = [
@@ -31,14 +30,16 @@ export default function Home () {
   return (
     <div>
       <h2>仕事のストレスチェック</h2>
-        {!isFinished ? (
+        {!isFinished
+          ? (
           <StressCheckForm
             currentQuestion={questions[currentQuestion]}
             onSubmit={handleSubmit}
           />
-        ) : (
+            )
+          : (
           <h2>合計点数: {totalScore}</h2>
-        )}
+            )}
     </div>
   )
 }
