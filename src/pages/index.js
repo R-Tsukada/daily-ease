@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import StressCheckForm from '../../presentational/Organism/StressCheckForm';
+import StressCheckForm from '../presentational/Organism/StressCheckForm';
 
 const questions = [
   { id: 1, text: '仕事中、私はしばしば疲れ切ってしまう' },
