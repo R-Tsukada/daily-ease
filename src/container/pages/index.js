@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import StressCheckForm from '../components/Organism/StressCheckForm';
+import StressCheckForm from '../../presentational/Organism/StressCheckForm';
 
 const questions = [
   { id: 1, text: '仕事中、私はしばしば疲れ切ってしまう' },
@@ -30,19 +30,17 @@ export default function Home() {
   return (
     <div>
       <h2>仕事のストレスチェック</h2>
-      {!isFinished
-        ? (
-          <StressCheckForm
-            currentQuestion={questions[currentQuestion]}
-            onSubmit={handleSubmit}
-          />
-        )
-        : (
-          <h2>
-            合計点数:
-            {totalScore}
-          </h2>
-        )}
+      {!isFinished ? (
+        <StressCheckForm
+          currentQuestion={questions[currentQuestion]}
+          onSubmit={handleSubmit}
+        />
+      ) : (
+        <h2>
+          合計点数:
+          {totalScore}
+        </h2>
+      )}
     </div>
   );
 }
