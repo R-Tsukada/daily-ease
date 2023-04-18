@@ -31,6 +31,7 @@ module.exports = {
     '@typescript-eslint',
     'import',
     'jsx-a11y',
+    'prefer-arrow',
     'react',
     'react-hooks'
   ],
@@ -103,7 +104,15 @@ module.exports = {
       }
     ],
     // JSX記述をする場合にreactモジュールをReactとしてインポートすることを強制する。今はoffにしている
-    'react/react-in-jsx-scope': 'off'
+    'react/react-in-jsx-scope': 'off',
+    'prefer-arrow/preder-arrow-functions': [
+      'error',
+      {
+        disallowPrototype: true,
+        singleReturnOnly: false,
+        classPropertiesAllowed: false
+      }
+    ]
   },
   overrides: [
     {
