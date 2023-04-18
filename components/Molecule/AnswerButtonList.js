@@ -1,8 +1,8 @@
-import React from 'react'
-import Button from '../atoms/Button'
+import React from 'react';
+import Button from '../atoms/Button';
 
-function AnswerButtonList ({ onButtonClick }) {
-  const answers = ['1：全く当てはまらない', '2：あまり当てはまらない', 'どちらともいえない', '4：当てはまる', '5：非常に当てはまる']
+function AnswerButtonList({ onButtonClick }) {
+  const answers = ['1：全く当てはまらない', '2：あまり当てはまらない', 'どちらともいえない', '4：当てはまる', '5：非常に当てはまる'];
 
   return (
     <div>
@@ -12,7 +12,7 @@ function AnswerButtonList ({ onButtonClick }) {
         </Button>
       ))}
     </div>
-  )
+  );
 }
 
-export default AnswerButtonList
+export default AnswerButtonList;

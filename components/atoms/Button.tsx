@@ -1,7 +1,11 @@
-import React from 'react'
+/* eslint-disable max-len */
+import React from 'react';
 
-function Button ({ onClick, children }) {
-  return <button onClick={onClick}>{children}</button>
+interface ButtonProps {
+  onClick: () => void
+  children: React.ReactNode
 }
 
-export default Button
+const Button: React.FC<ButtonProps> = ({ onClick, children }) => <button onClick={onClick}>{children}</button>;
+
+export default Button;
