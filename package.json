@@ -4,8 +4,8 @@
     "dev": "next dev",
     "build": "next build",
     "test": "jest --watch",
-    "lint": "eslint --ext '**/*.{js,jsx,ts,tsx}'",
-    "format": "eslint --cache --fix '**/*.{js,jsx,ts,tsx}' && prettier --write '**/*.{js,jsx,ts,tsx}'"
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
+    "format": "eslint --fix '**/*.{js,jsx,ts,tsx}' && prettier --write '**/*.{js,jsx,ts,tsx}'"
   },
   "dependencies": {
     "@babel/preset-react": "^7.18.6",
@@ -33,6 +33,7 @@
     "@typescript-eslint/eslint-plugin": "^5.43.0",
     "babel-jest": "^29.5.0",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-config-standard-with-typescript": "^34.0.1",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
