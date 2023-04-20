@@ -105,7 +105,8 @@ module.exports = {
     ],
     // JSX記述をする場合にreactモジュールをReactとしてインポートすることを強制する。今はoffにしている
     'react/react-in-jsx-scope': 'off',
-    'prefer-arrow/preder-arrow-functions': [
+    // 関数定義をアロー関数にするルール
+    'prefer-arrow/prefer-arrow-functions': [
       'error',
       {
         disallowPrototype: true,
