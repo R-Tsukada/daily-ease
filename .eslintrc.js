@@ -36,6 +36,8 @@ module.exports = {
     'react-hooks'
   ],
   rules: {
+    // trueにすると名前付きコンポーネントには関数宣言が優先され、名前のないコンポーネントには関数式が優先されため。
+    'react/function-component-definition': 'off',
     // 定数前の変数の使用を禁じる。import React from 'react'でエラーになることを防ぐ
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': [
