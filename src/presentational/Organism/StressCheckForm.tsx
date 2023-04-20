@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { FC } from 'react';
 import AnswerButtonList from '../Molecule/AnswerButtonList';
 
-function StressCheckForm({ currentQuestion, onSubmit }) {
+interface CurrentQuestion {
+  id: number;
+  text: string;
+}
+
+interface StressCheckFormProps {
+  currentQuestion: CurrentQuestion;
+  onSubmit: (value: unknown) => void;
+}
+
+const StressCheckForm: FC<StressCheckFormProps> = ({ currentQuestion, onSubmit }) => {
   return (
     <>
       <p className='text-xl font-bold text-violet-500 mb-1'>
@@ -12,6 +22,6 @@ function StressCheckForm({ currentQuestion, onSubmit }) {
       <AnswerButtonList onButtonClick={onSubmit} />
     </>
   );
-}
+};
 
 export default StressCheckForm;
