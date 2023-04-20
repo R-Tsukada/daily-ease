@@ -5,7 +5,7 @@ import Button from '../Button';
 describe('Button', () => {
   test('renders children and responds to click events', () => {
     const onClick = jest.fn();
-    const { getByRole } = render(<Button onClick={onClick}>'1：全く当てはまらない'</Button>);
+    const { getByRole } = render(<Button onClick={onClick}>&apos;1:全く当てはまらない&apos;</Button>);
 
     fireEvent.click(getByRole('button'));
     expect(onClick).toHaveBeenCalled();

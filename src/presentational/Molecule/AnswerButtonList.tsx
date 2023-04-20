@@ -1,7 +1,11 @@
 import React from 'react';
 import Button from '../atoms/Button';
 
-function AnswerButtonList({ onButtonClick }) {
+interface AnswerButtonListProps {
+  onButtonClick: (value: number) => void;
+}
+
+const AnswerButtonList: React.FC<AnswerButtonListProps> = ({ onButtonClick }) => {
   const answers = [
     '1：全く当てはまらない',
     '2：あまり当てはまらない',

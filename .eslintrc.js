@@ -36,6 +36,8 @@ module.exports = {
     'react-hooks'
   ],
   rules: {
+    // trueにすると名前付きコンポーネントには関数宣言が優先され、名前のないコンポーネントには関数式が優先されため。
+    'react/function-component-definition': 'off',
     // 定数前の変数の使用を禁じる。import React from 'react'でエラーになることを防ぐ
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': [
@@ -105,7 +107,8 @@ module.exports = {
     ],
     // JSX記述をする場合にreactモジュールをReactとしてインポートすることを強制する。今はoffにしている
     'react/react-in-jsx-scope': 'off',
-    'prefer-arrow/preder-arrow-functions': [
+    // 関数定義をアロー関数にするルール
+    'prefer-arrow/prefer-arrow-functions': [
       'error',
       {
         disallowPrototype: true,
