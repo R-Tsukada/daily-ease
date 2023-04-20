@@ -7,6 +7,7 @@ type AppProps = {
 };
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => (
+  // eslint-disable-next-line react/jsx-props-no-spreading
   <Component {...pageProps} />
 )
 
