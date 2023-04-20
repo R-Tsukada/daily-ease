@@ -28,19 +28,23 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <h2>仕事のストレスチェック</h2>
-      {!isFinished ? (
-        <StressCheckForm
-          currentQuestion={questions[currentQuestion]}
-          onSubmit={handleSubmit}
-        />
-      ) : (
-        <h2>
-          合計点数:
-          {totalScore}
-        </h2>
-      )}
+    <div className="flex items-center justify-center min-h-screen">
+      <div>
+        <h2 className="text-2xl font-bold text-center mb-4">仕事のストレスチェック</h2>
+          <div className='text-center'>
+            {!isFinished ? (
+            <StressCheckForm
+              currentQuestion={questions[currentQuestion]}
+              onSubmit={handleSubmit}
+            />
+            ) : (
+              <h3 className='text-xl font-bold'>
+                合計点数:
+                {totalScore}
+              </h3>
+            )}
+          </div>
+      </div>
     </div>
   );
 }
