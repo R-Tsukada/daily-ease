@@ -5,7 +5,7 @@ function AnswerButtonList({ onButtonClick }) {
   const answers = [
     '1：全く当てはまらない',
     '2：あまり当てはまらない',
-    'どちらともいえない',
+    '3:どちらともいえない',
     '4：当てはまる',
     '5：非常に当てはまる',
   ];

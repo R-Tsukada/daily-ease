@@ -4,7 +4,7 @@ import AnswerButtonList from '../Molecule/AnswerButtonList';
 function StressCheckForm({ currentQuestion, onSubmit }) {
   return (
     <>
-      <p>
+      <p className='text-xl font-bold text-violet-500 mb-1'>
         Question
         {currentQuestion.id}
       </p>
