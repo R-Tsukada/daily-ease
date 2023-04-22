@@ -1,8 +1,8 @@
-import React from 'react';
-import Button from '../atoms/Button';
+import React from 'react'
+import Button from '../atoms/Button'
 
 interface AnswerButtonListProps {
-  onButtonClick: (value: number) => void;
+  onButtonClick: (value: number) => void
 }
 
 const AnswerButtonList: React.FC<AnswerButtonListProps> = ({ onButtonClick }) => {
@@ -12,17 +12,17 @@ const AnswerButtonList: React.FC<AnswerButtonListProps> = ({ onButtonClick }) =>
     '3:どちらともいえない',
     '4：当てはまる',
     '5：非常に当てはまる',
-  ];
+  ]
 
   return (
-    <div>
+    <div data-testid="answer-button-list">
       {answers.map((answer, index) => (
         <Button key={answer} onClick={() => onButtonClick(index + 1)}>
           {answer}
         </Button>
       ))}
     </div>
-  );
+  )
 }
 
-export default AnswerButtonList;
+export default AnswerButtonList
