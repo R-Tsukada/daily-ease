@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../atoms/Button'
+import AnswerButton from '../atoms/AnswerButton'
 
 interface AnswerButtonListProps {
   onButtonClick: (value: number) => void
@@ -17,9 +17,9 @@ const AnswerButtonList: React.FC<AnswerButtonListProps> = ({ onButtonClick }) =>
   return (
     <div data-testid="answer-button-list">
       {answers.map((answer, index) => (
-        <Button key={answer} onClick={() => onButtonClick(index + 1)}>
+        <AnswerButton key={answer} onClick={() => onButtonClick(index + 1)}>
           {answer}
-        </Button>
+        </AnswerButton>
       ))}
     </div>
   )

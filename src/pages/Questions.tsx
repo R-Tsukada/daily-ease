@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react'
 import Link from 'next/link'
 import StressCheckForm from '../presentational/Organism/StressCheckForm'
-import Button from '../presentational/atoms/Button'
+import AnswerButton from '../presentational/atoms/AnswerButton'
 
 interface Question {
   id: number
@@ -52,7 +52,7 @@ const Questions: FC = () => {
             )}
           </div>
           <div className='text-center'>
-            <Link href='/'><Button>戻る</Button></Link>
+            <Link href='/'><AnswerButton>戻る</AnswerButton></Link>
           </div>
       </div>
     </div>

@@ -1,8 +1,8 @@
 import React from 'react'
-import Button from '../../presentational/atoms/Button'
+import AnswerButton from '../../presentational/atoms/AnswerButton'
 
 const PageSelect = () => (
-  <Button>仕事のストレスチェック</Button>
+  <AnswerButton>仕事のストレスチェック</AnswerButton>
 )
 
 export default PageSelect
