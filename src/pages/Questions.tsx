@@ -35,8 +35,8 @@ const Questions: FC = () => {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div>
+    <div className="flex justify-center min-h-screen">
+      <div className='mt-3'>
         <h2 className="text-2xl font-bold text-center mb-4">仕事のストレスチェック</h2>
           <div className='text-center'>
             {!isFinished ? (
