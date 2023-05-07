@@ -17,7 +17,7 @@ const StressCheckForm: FC<StressCheckFormProps> = ({ currentQuestion, onSubmit }
       Question
       {currentQuestion.id}
     </p>
-    <p>{currentQuestion.text}</p>
+    <p className='mt-5 font-bold'>{currentQuestion.text}</p>
     <AnswerButtonList onButtonClick={onSubmit} />
   </>
 );
