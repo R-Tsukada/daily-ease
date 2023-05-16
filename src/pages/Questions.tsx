@@ -35,25 +35,26 @@ const Questions: FC = () => {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div>
-        <h2 className="text-2xl font-bold text-center mb-4">仕事のストレスチェック</h2>
-          <div className='text-center'>
-            {!isFinished ? (
-              <StressCheckForm
-                currentQuestion={questions[currentQuestion]}
-                onSubmit={handleSubmit}
-              />
-            ) : (
-              <h3 className='text-xl font-bold'>
-                合計点数:
-                {totalScore}
-              </h3>
-            )}
-          </div>
-          <div className='text-center'>
-            <Link href='/'><BackButton>戻る</BackButton></Link>
-          </div>
+    <div className="flex justify-center min-h-screen">
+      <div className='mt-3'>
+        <div className='text-center mt-3'>
+          {!isFinished ? (
+            <StressCheckForm
+              currentQuestion={questions[currentQuestion]}
+              onSubmit={handleSubmit}
+              totalQuestions={questions.length}
+              currentQuestionIndex={currentQuestion}
+            />
+          ) : (
+            <h3 className='text-xl font-bold'>
+              合計点数:
+              {totalScore}
+            </h3>
+          )}
+        </div>
+        <div className='text-center'>
+          <Link href='/'><BackButton>トップページに戻る</BackButton></Link>
+        </div>
       </div>
     </div>
   )
