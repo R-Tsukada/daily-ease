@@ -42,6 +42,8 @@ const Questions: FC = () => {
             <StressCheckForm
               currentQuestion={questions[currentQuestion]}
               onSubmit={handleSubmit}
+              totalQuestions={questions.length}
+              currentQuestionIndex={currentQuestion}
             />
           ) : (
             <h3 className='text-xl font-bold'>
