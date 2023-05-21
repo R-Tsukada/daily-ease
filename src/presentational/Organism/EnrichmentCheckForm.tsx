@@ -1,13 +1,13 @@
 import React, { FC } from 'react';
 import { LineProgressBar } from '@frogress/line'
-import AnswerButtonList from '../Molecule/AnswerButtonList';
+import UwesAnswerButtonList from '../Molecule/UwesAnswerButtonList';
 
 interface CurrentQuestion {
   id: number;
   text: string;
 }
 
-interface StressCheckFormProps {
+interface EnrichmentCheckFormProps {
   currentQuestion: CurrentQuestion;
   onSubmit: (value: unknown) => void;
   totalQuestions: number;
@@ -15,7 +15,7 @@ interface StressCheckFormProps {
 }
 
 
-const StressCheckForm: FC<StressCheckFormProps> = ({ currentQuestion, onSubmit, totalQuestions, currentQuestionIndex }) => {
+const EnrichmentCheckForm: FC<EnrichmentCheckFormProps> = ({ currentQuestion, onSubmit, totalQuestions, currentQuestionIndex }) => {
   const progress = ((currentQuestionIndex) / totalQuestions) * 100;
 
   return (
@@ -32,9 +32,9 @@ const StressCheckForm: FC<StressCheckFormProps> = ({ currentQuestion, onSubmit, 
       />
       <p>{ currentQuestionIndex + 1 } / { totalQuestions }</p>
       <p className='mt-5 font-bold'>{currentQuestion.text}</p>
-      <AnswerButtonList onButtonClick={onSubmit} />
+      <UwesAnswerButtonList onButtonClick={onSubmit} />
     </>
   )
 };
 
-export default StressCheckForm;
+export default EnrichmentCheckForm;
