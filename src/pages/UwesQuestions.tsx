@@ -35,9 +35,10 @@ const UwesQuestions: FC = () => {
     }
   }
 
-const averageScore = (totalScore / questions.length).toFixed(1)
+const averageScore: number = (totalScore / questions.length).toFixed(1)
 
-let message;
+let message: string
+
 if (averageScore >= 6) {
   message = '現在の仕事はあなたに充実感を与えているようです！'
 } else if (averageScore >= 4) {

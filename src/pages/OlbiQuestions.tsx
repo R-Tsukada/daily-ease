@@ -34,7 +34,7 @@ const OlbiQuestions: FC = () => {
     }
   }
 
-let message
+let message: string
 
 if (totalScore > 32) {
   message = '仕事での疲労ややりがいに問題が出ているかも。リフレッシュする方法を探しましょう'
