@@ -46,10 +46,14 @@ const OlbiQuestions: FC = () => {
               currentQuestionIndex={currentQuestion}
             />
           ) : (
-            <h3 className='text-xl font-bold'>
-              合計点数:
-              {totalScore}
-            </h3>
+            <div>
+              <p className='text-xl font-bold'>合計点数:{totalScore}</p>
+              <p className='mt-2 mb-5'>{
+                totalScore >= 32 ? '仕事での疲労ややりがいに問題が出ているかも。リフレッシュする方法を探しましょう' :
+                totalScore >= 16 ? '仕事に対するストレスを感じているかもしれません。リラックスする時間を作ることを検討してみてください' :
+                '現在のところ仕事での問題はなさそうです！'
+              }</p>
+            </div>
           )}
         </div>
         <div className='text-center'>
