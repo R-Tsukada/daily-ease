@@ -35,7 +35,7 @@ const UwesQuestions: FC = () => {
     }
   }
 
-const averageScore: number = (totalScore / questions.length).toFixed(1)
+const averageScore = Number((totalScore / questions.length).toFixed(1))
 
 let message: string
 
