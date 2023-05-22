@@ -1,15 +1,15 @@
 import React from 'react'
 import { fireEvent, render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import Questions from '../src/pages/Questions'
+import OlbiQuestions from '../src/pages/OlbiQuestions'
 
-describe('Questions', () => {
+describe('OlbiQuestions', () => {
   beforeEach(() => {
-    render(<Questions />)
+    render(<OlbiQuestions />)
   })
 
   it('renders without crashing', () => {
-    render(<Questions />)
+    render(<OlbiQuestions />)
   })
 
   it('displays the first question initially', () => {

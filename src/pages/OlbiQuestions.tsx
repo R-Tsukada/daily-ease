@@ -19,7 +19,7 @@ const questions: Question[] = [
   { id: 8, text: '仕事に対する情熱が薄れてきてると感じる' },
 ]
 
-const Questions: FC = () => {
+const OlbiQuestions: FC = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [totalScore, setTotalScore] = useState(0)
   const [isFinished, setIsFinished] = useState(false)
@@ -60,4 +60,4 @@ const Questions: FC = () => {
   )
 }
 
-export default Questions
+export default OlbiQuestions
