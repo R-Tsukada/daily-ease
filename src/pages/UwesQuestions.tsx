@@ -3,12 +3,12 @@ import Link from 'next/link'
 import EnrichmentStressCheckForm from '../presentational/Organism/EnrichmentCheckForm'
 import BackButton from '../presentational/atoms/BackButton'
 
-interface Question {
+interface UwesQuestions {
   id: number
   text: string
 }
 
-const questions: Question[] = [
+const questions: UwesQuestions[] = [
   { id: 1, text: '私の仕事は私に活力を与えます。' },
   { id: 2, text: '仕事をするとき、私は自分自身を疲れていると感じます。' },
   { id: 3, text: '私の仕事に没頭すると、時間がとても早く過ぎていくと感じます。' },
@@ -20,7 +20,7 @@ const questions: Question[] = [
   { id: 9, text: '私は自分の仕事に情熱を持って取り組めると感じます。' },
 ]
 
-const Questions: FC = () => {
+const UwesQuestions: FC = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [totalScore, setTotalScore] = useState(0)
   const [isFinished, setIsFinished] = useState(false)
@@ -61,4 +61,4 @@ const Questions: FC = () => {
   )
 }
 
-export default Questions
+export default UwesQuestions

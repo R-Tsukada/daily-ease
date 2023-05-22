@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import PageSelect from './StressCheckPageSelect';
 
-describe('Questions', () => {
+describe('OlbiQuestions', () => {
   beforeEach(() => {
     render(<PageSelect />);
   });
