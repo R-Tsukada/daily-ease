@@ -47,10 +47,18 @@ const UwesQuestions: FC = () => {
               currentQuestionIndex={currentQuestion}
             />
           ) : (
-            <h3 className='text-xl font-bold'>
-              平均点数:
-              {(totalScore / questions.length)}
-            </h3>
+            <div>
+              <p className='text-xl font-bold'>
+                平均点数:
+                {(totalScore / questions.length).toFixed(1)}
+              </p>
+                <p>{
+                  (totalScore / questions.length) >= 6 ? '現在の仕事はあなたに充実感を与えているようです！' :
+                  (totalScore / questions.length) >= 4 ? '少しマンネリを感じているようです。日々の仕事の仕方に変化を加えてみもいいかもしれません' :
+                  (totalScore / questions.length) >= 2 ? '現在の状況に満足できていないようです。自分の価値観を改めて見直すいい機会かもしれません' :
+                        'いまの仕事が嫌気を感じているようです。自分のキャリアを見直してみましょう'
+                }</p>
+            </div>
           )}
         </div>
         <div className='text-center'>
