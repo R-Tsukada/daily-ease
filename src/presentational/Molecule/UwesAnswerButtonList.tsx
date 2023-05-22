@@ -1,11 +1,11 @@
 import React from 'react'
 import AnswerButton from '../atoms/AnswerButton'
 
-interface AnswerButtonListProps {
+interface UwesAnswerButtonListProps {
   onButtonClick: (value: number) => void
 }
 
-const AnswerButtonList: React.FC<AnswerButtonListProps> = ({ onButtonClick }) => {
+const UwesAnswerButtonList: React.FC<UwesAnswerButtonListProps> = ({ onButtonClick }) => {
   const answers = [
     '0：決して',
     '1：あまり当てはまらない',
@@ -18,7 +18,7 @@ const AnswerButtonList: React.FC<AnswerButtonListProps> = ({ onButtonClick }) =>
   ]
 
   return (
-    <div data-testid="answer-button-list">
+    <div data-testid="uwes-answer-button-list">
       {answers.map((answer, index) => (
         <AnswerButton key={answer} onClick={() => onButtonClick(index + 1)}>
           {answer}
@@ -28,4 +28,4 @@ const AnswerButtonList: React.FC<AnswerButtonListProps> = ({ onButtonClick }) =>
   )
 }
 
-export default AnswerButtonList
+export default UwesAnswerButtonList

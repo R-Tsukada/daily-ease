@@ -4,16 +4,16 @@ import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import StressCheckForm from './StressCheckForm'
 
-const mockFn = jest.fn()
-
 const sampleQuestion = {
   id: 1,
   text: '仕事中、私はしばしば疲れ切ってしまう'
 }
 
+const mockFn = jest.fn()
+
 describe('StressCheckForm', () => {
   it('renders without crashing', () => {
-    render(<StressCheckForm currentQuestion={sampleQuestion} onSubmit={mockFn} />)
+    render(<StressCheckForm currentQuestion={sampleQuestion} onSubmit={mockFn} totalQuestions={10} currentQuestionIndex={0} />)
   })
 
   it('displays the correct question id and text', () => {

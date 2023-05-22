@@ -6,7 +6,7 @@ import UwesAnswerButtonList from './UwesAnswerButtonList'
 describe('UwesAnswerButtonList', () => {
   it('renders without crashing', () => {
     const mockFn = jest.fn()
-    render(<UwesAnwserButtonList onButtonClick={mockFn} />)
+    render(<UwesAnswerButtonList onButtonClick={mockFn} />)
   })
 
   it('renders the expected number of buttons', () => {

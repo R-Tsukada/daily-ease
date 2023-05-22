@@ -3,12 +3,12 @@ import Link from 'next/link'
 import StressCheckForm from '../presentational/Organism/StressCheckForm'
 import BackButton from '../presentational/atoms/BackButton'
 
-interface Question {
+interface OlbiQuestions {
   id: number
   text: string
 }
 
-const questions: Question[] = [
+const questions: OlbiQuestions[] = [
   { id: 1, text: '仕事中、私はしばしば疲れ切ってしまう' },
   { id: 2, text: '仕事が終わるころには、わたしはもうクタクタだ' },
   { id: 3, text: '朝起きたとき、わたしはすでに疲れている' },
