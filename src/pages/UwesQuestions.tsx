@@ -35,6 +35,19 @@ const UwesQuestions: FC = () => {
     }
   }
 
+const averageScore = (totalScore / questions.length).toFixed(1)
+
+let message;
+if (averageScore >= 6) {
+  message = '現在の仕事はあなたに充実感を与えているようです！'
+} else if (averageScore >= 4) {
+  message = '少しマンネリを感じているようです。日々の仕事の仕方に変化を加えてみもいいかもしれません'
+} else if (averageScore >= 2) {
+  message = '現在の状況に満足できていないようです。自分の価値観を改めて見直すいい機会かもしれません'
+} else {
+  message = 'いまの仕事に嫌気を感じているようです。自分のキャリアを見直してみましょう'
+}
+
   return (
     <div className="flex justify-center min-h-screen">
       <div className='mt-3'>
@@ -50,14 +63,9 @@ const UwesQuestions: FC = () => {
             <div>
               <p className='text-xl font-bold'>
                 平均点数:
-                {(totalScore / questions.length).toFixed(1)}
+                {averageScore}
               </p>
-                <p>{
-                  (totalScore / questions.length) >= 6 ? '現在の仕事はあなたに充実感を与えているようです！' :
-                  (totalScore / questions.length) >= 4 ? '少しマンネリを感じているようです。日々の仕事の仕方に変化を加えてみもいいかもしれません' :
-                  (totalScore / questions.length) >= 2 ? '現在の状況に満足できていないようです。自分の価値観を改めて見直すいい機会かもしれません' :
-                        'いまの仕事が嫌気を感じているようです。自分のキャリアを見直してみましょう'
-                }</p>
+              <p className='mt-2 mb-5'>{message}</p>
             </div>
           )}
         </div>
