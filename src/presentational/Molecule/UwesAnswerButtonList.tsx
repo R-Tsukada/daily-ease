@@ -18,7 +18,7 @@ const UwesAnswerButtonList: React.FC<UwesAnswerButtonListProps> = ({ onButtonCli
   ]
 
   return (
-    <div data-testid="uwes-answer-button-list">
+    <div className='flex flex-col items-center' data-testid="uwes-answer-button-list">
       {answers.map((answer, index) => (
         <AnswerButton key={answer} onClick={() => onButtonClick(index + 1)}>
           {answer}

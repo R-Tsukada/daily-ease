@@ -15,7 +15,7 @@ const AnswerButtonList: React.FC<AnswerButtonListProps> = ({ onButtonClick }) =>
   ]
 
   return (
-    <div data-testid="answer-button-list">
+    <div className='flex flex-col items-center' data-testid="answer-button-list">
       {answers.map((answer, index) => (
         <AnswerButton key={answer} onClick={() => onButtonClick(index + 1)}>
           {answer}
