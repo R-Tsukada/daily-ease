@@ -63,7 +63,7 @@ if (totalScore > 32) {
             </div>
           )}
         </div>
-        <div className='text-center'>
+        <div className='text-center mt-5'>
           <Link href='/'><BackButton>トップページに戻る</BackButton></Link>
         </div>
       </div>
