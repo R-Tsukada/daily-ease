@@ -19,7 +19,7 @@ describe('StressCheckForm', () => {
   it('displays the correct question id and text', () => {
     const { getByText } = render(<StressCheckForm currentQuestion={sampleQuestion} onSubmit={mockFn} />)
 
-    expect(getByText(`Question${sampleQuestion.id}`)).toBeInTheDocument()
+    expect(getByText(`Question - ${sampleQuestion.id}`)).toBeInTheDocument()
     expect(getByText(sampleQuestion.text)).toBeInTheDocument()
   })
 

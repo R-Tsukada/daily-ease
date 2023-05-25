@@ -20,18 +20,20 @@ const EnrichmentCheckForm: FC<EnrichmentCheckFormProps> = ({ currentQuestion, on
 
   return (
     <>
-      <p className='text-xl font-bold text-violet-500 mb-1'>
-        Question
-        {currentQuestion.id}
+      <h2 className='font-semibold'>仕事の充実度チェックテスト</h2>
+      <div className='flex flex-col w-72 mx-auto p-2'>
+        <p className='text-xs mb-2'>{ currentQuestionIndex + 1 } / { totalQuestions }</p>
+        <LineProgressBar
+          className='md:w-1 px-5'
+          percent={progress}
+          rounded={36}
+          height={36}
+        />
+      </div>
+      <p className='text-xl font-semibold text-violet-500 mb-1 mt-3'>
+        Question - {currentQuestion.id}
       </p>
-      <LineProgressBar
-        className='md:w-1 px-5'
-        percent={progress}
-        rounded={36}
-        height={36}
-      />
-      <p>{ currentQuestionIndex + 1 } / { totalQuestions }</p>
-      <p className='mt-5 font-bold'>{currentQuestion.text}</p>
+      <p className='font-medium w-60 mx-auto mb-3'>{currentQuestion.text}</p>
       <UwesAnswerButtonList onButtonClick={onSubmit} />
     </>
   )
