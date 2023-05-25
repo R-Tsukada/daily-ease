@@ -46,7 +46,7 @@ if (averageScore >= 6) {
 } else if (averageScore >= 2) {
   message = '現在の状況に満足できていないようです。自分の価値観を改めて見直すいい機会かもしれません'
 } else {
-  message = 'いまの仕事に嫌気を感じているようです。自分のキャリアを見直してみましょう'
+  message = '仕事に対するエネルギーや意欲、関与度が低く、集中力や没入感も乏しい状態です。今の状態を見直しましょう。'
 }
 
   return (
@@ -66,7 +66,7 @@ if (averageScore >= 6) {
                 平均点数:
                 {averageScore}
               </p>
-              <p className='mt-2 mb-5'>{message}</p>
+              <p className='font-medium w-60 mx-auto mt-3 mb-5'>{message}</p>
             </div>
           )}
         </div>

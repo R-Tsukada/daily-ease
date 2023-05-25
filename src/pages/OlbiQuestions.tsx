@@ -34,15 +34,15 @@ const OlbiQuestions: FC = () => {
     }
   }
 
-let message: string
+  let message: string
 
-if (totalScore > 32) {
-  message = '仕事での疲労ややりがいに問題が出ているかも。リフレッシュする方法を探しましょう'
-} else if (totalScore > 16) {
-  message = '仕事に対するストレスを感じているかもしれません。リラックスする時間を作ることを検討してみてください'
-} else {
-  message = '現在のところ仕事での問題はなさそうです！'
-}
+  if (totalScore > 32) {
+    message = '仕事での疲労ややりがいに問題が出ているかも。リフレッシュする方法を探しましょう'
+  } else if (totalScore > 16) {
+    message = '仕事に対するストレスを感じているかもしれません。リラックスする時間を作ることを検討してみてください'
+  } else {
+    message = '現在のところ仕事での問題はなさそうです！'
+  }
 
 
   return (
@@ -59,7 +59,7 @@ if (totalScore > 32) {
           ) : (
             <div>
               <p className='text-xl font-bold'>合計点数:{totalScore}</p>
-              <p className='mt-2 mb-5'>{message}</p>
+              <p className='font-medium w-60 mx-auto mt-3 mb-5'>{message}</p>
             </div>
           )}
         </div>
