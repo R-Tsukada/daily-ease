@@ -1,31 +1,29 @@
 import React from 'react'
 import Link from 'next/link'
-import StressCheckPageSelect from '../container/templates/StressCheckPageSelect'
-import EnrichmentCheckPageSelect from '../container/templates/EnrichmentCheckPageSelect'
-import TopImage from '../../public/undraw_specs_re_546x.svg'
+import WelcomeImage from '../../public/undraw_medicine_b-1-ol.svg'
+import AccountCreateButton from '../presentational/atoms/AccountCreateButton'
 
-const Home = () =>
-  (
-    <div className='flex justify-center min-h-screen'>
-      <div className='mt-5'>
-        <div className='flex flex-row items-center border rounded-xl h-24 bg-teal-300'>
-          <p className='flex-1 text-white text-center ml-2'>Let&apos;s Play</p>
-          <TopImage
-            className='flex-1'
-            width={120}
-            height={60}
-          />
-        </div>
-        <div className='flex flex-col mt-10'>
-          <div>
-            <Link href='/OlbiQuestions'><span className='hover:enabled'><StressCheckPageSelect /></span></Link>
-          </div>
-          <div className='mt-3'>
-            <Link href='/UwesQuestions'><span className='hover:enabled'><EnrichmentCheckPageSelect /></span></Link>
-          </div>
-        </div>
-      </div>
+const Home = () => (
+  <div className='flex flex-col items-center min-h-screen'>
+    <div className='mt-10'>
+      <WelcomeImage
+        widths={360}
+        height={240}
+      />
     </div>
-  )
+    <h3 className='text-xl text-[#6066D0] font-[Poppins] mt-5 mb-3'>WELCOME</h3>
+    <p className='text-center font-[Poppins] w-72'>メンタルの状態をモニタリングし、充実感のある毎日を過ごしましょう</p>
+    <div className='mt-10'>
+      <Link
+        href='/TopPage'
+        className='hover:enabled'
+      >
+        <AccountCreateButton>
+          はじめてみる
+        </AccountCreateButton>
+      </Link>
+    </div>
+  </div>
+)
 
 export default Home
